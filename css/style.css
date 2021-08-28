@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    min-height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1rem 24px 6px #C5CFF3;
+}
+
+.card .img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card .card-body {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+p.paragraph {
+    margin-bottom: 1rem;
+    color: var(--desaturated-blue);
+}
+
+.card ul {
+    padding: 1.25rem 0.5rem;
+    margin: 1.5rem 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 8px;
+}
+
+.card ul li {
+    flex: 1;
+    justify-items: center;
+}
+
+.card ul li.title {
+    flex: 2;
+    text-align: left;
+    padding-left: 0.5rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card ul li.title span {
+    font-weight: 400;
+    color: var(--desaturated-blue);
+    display: block;
+    padding-top: 0.3rem;
+}
+
+.card ul li a {
+    text-decoration: underline;
+    color: var(--bright-blue);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0 16px 24px 2px #D7D5FE;
+}
+
+.btn-default {
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    padding-bottom: 0;
+}
