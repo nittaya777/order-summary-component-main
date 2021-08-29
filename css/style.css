@@ -19,6 +19,7 @@ body {
     background-image: url(/images/pattern-background-desktop.svg);
     background-color: var(--pale-blue);
     height: 100vh;
+    width: 1440px;
     background-repeat: no-repeat;
     display: grid;
     place-content: center;
@@ -97,10 +98,16 @@ p.paragraph {
     color: var(--bright-blue);
     font-weight: 600;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.card ul li a:hover {
+    color: #8A85D1;
 }
 
 .btn {
     display: block;
+    cursor: pointer;
     width: 100%;
     text-align: center;
     border: 1px solid transparent;
@@ -116,8 +123,33 @@ p.paragraph {
     box-shadow: 0 16px 24px 2px #D7D5FE;
 }
 
+.btn-primary:hover {
+    background-color: #766CF1;
+}
+
 .btn-default {
     color: var(--desaturated-blue);
     background-color: transparent;
     padding-bottom: 0;
+}
+
+.btn-default:hover {
+    color: var(--dark-blue);
+}
+
+@media only screen and (max-width:960px) {
+    body {
+        width: 100%;
+    }
+    .card {
+        width: 375px;
+        flex-direction: column;
+        height: auto;
+    }
+    .card .card-body {
+        padding: 2.5rem 1.5rem;
+    }
+    p.paragraph {
+        padding: 0 2rem;
+    }
 }
